@@ -1,0 +1,41 @@
+OPTAB = {
+    "ADD":"18",
+    "CLEAR":"B4",
+    "COMP":"28",
+    "COMPR":"A0",
+    "DIV":"24",
+    "J":"3C",
+    "JEQ":"30",
+    "JGT":"34",
+    "JLT":"38",
+    "JSUB":"48",
+    "LDA":"00",
+    "LDB":"68",
+    "LDCH":"50",
+    "LDL":"08",
+    "LDT":"74",
+    "LDX":"04",
+    "MUL":"20",
+    "RD":"D8",
+    "RSUB":"4C",
+    "STA":"0C",
+    "STB":"78",
+    "STCH":"54",
+    "STL":"14",
+    "STT":"84",
+    "STX":"10",
+    "SUB":"1C",
+    "TD":"E0",
+    "TIX":"2C",
+    "TIXR":"B8",
+    "WD":"DC",
+
+    #額外新增的
+    "ADDR":"90",
+    "LDS":"6C",
+    "DIVR":"9C",
+    "MULR":"98",
+    "SUBR":"94"
+}
+
+Format2_mnemonic = ['CLEAR', 'COMPR', 'TIXR', 'ADDR', 'DIVR', 'MULR', 'SUBR']

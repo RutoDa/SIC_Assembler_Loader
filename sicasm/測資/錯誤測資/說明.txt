@@ -1,0 +1,6 @@
+input0: INSTRUCTION 和 REGISTER 必須是大寫，第2列sTL(INSTRUCTION)，第27列a(REGISTER)。
+input1: Label 名稱錯誤，第2列 RETADD (RETADR)，第10列 CLOOB (CLOOP)。
+input2: op-code錯誤，第5列 JUMP (JSUB)，第33列 COMIC (COMPR)。
+input3: PC-relative 和 Base-relative 都不能用，第9列 JSUB (+JSUB)，第15列 JSUB (+JSUB)，第29列 LDT(+LDT)。
+input4: 結合以上錯誤。
+expression_illegal: expression不合法，第16列與第20列

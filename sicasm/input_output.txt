@@ -1,0 +1,76 @@
+=SYMTAB=
+COPY     0000
+FIRST    0000
+CLOOP    0006
+ENDFIL   001A
+EOF      002D
+RETADR   0030
+LENGTH   0033
+BUFFER   0036
+BUFEND   1036
+MAXLEN   1000
+RDREC    1036
+RLOOP    1040
+EXIT     1056
+INPUT    105C
+WRREC    105D
+WLOOP    1062
+REF      1073
+OUTPUT   1079
+
+=OBJECT CODES=
+1  LOC=0000  none
+2  LOC=0000  17202D, pc-relative, nixbpe=110010
+3  LOC=0003  69202D, pc-relative, nixbpe=010010
+4  LOC=0006  none
+5  LOC=0006  4B101036, format4, nixbpe=110001
+6  LOC=000A  032026, pc-relative, nixbpe=110010
+7  LOC=000D  290000, none, nixbpe=010000
+8  LOC=0010  332007, pc-relative, nixbpe=110010
+9  LOC=0013  4B10105D, format4, nixbpe=110001
+10 LOC=0017  3F2FEC, pc-relative, nixbpe=110010
+11 LOC=001A  032010, pc-relative, nixbpe=110010
+12 LOC=001D  0F2016, pc-relative, nixbpe=110010
+13 LOC=0020  010003, none, nixbpe=010000
+14 LOC=0023  0F200D, pc-relative, nixbpe=110010
+15 LOC=0026  4B10105D, format4, nixbpe=110001
+16 LOC=002A  3E2003, pc-relative, nixbpe=100010
+17 LOC=002D  454F46, BYTE
+18 LOC=0030  none
+19 LOC=0033  none
+20 LOC=0036  none
+21 LOC=1036  none
+22 LOC=1000  none
+23 Comment
+24 Comment
+25 Comment
+26 LOC=1036  B410, format2
+27 LOC=1038  B400, format2
+28 LOC=103A  B440, format2
+29 LOC=103C  75101000, format4, nixbpe=010001
+30 LOC=1040  E32019, pc-relative, nixbpe=110010
+31 LOC=1043  332FFA, pc-relative, nixbpe=110010
+32 LOC=1046  DB2013, pc-relative, nixbpe=110010
+33 LOC=1049  A004, format2
+34 LOC=104B  332008, pc-relative, nixbpe=110010
+35 LOC=104E  57C003, base-relative, nixbpe=111100
+36 LOC=1051  B850, format2
+37 LOC=1053  3B2FEA, pc-relative, nixbpe=110010
+38 LOC=1056  134000, base-relative, nixbpe=110100
+39 LOC=1059  4F0000, none, nixbpe=110000
+40 LOC=105C  F1, BYTE
+41 Comment
+42 Comment
+43 Comment
+44 LOC=105D  B410, format2
+45 LOC=105F  774000, base-relative, nixbpe=110100
+46 LOC=1062  E32014, pc-relative, nixbpe=110010
+47 LOC=1065  332FFA, pc-relative, nixbpe=110010
+48 LOC=1068  53C003, base-relative, nixbpe=111100
+49 LOC=106B  DF200B, pc-relative, nixbpe=110010
+50 LOC=106E  B850, format2
+51 LOC=1070  3B2FEF, pc-relative, nixbpe=110010
+52 LOC=1073  032FF9, pc-relative, nixbpe=110010
+53 LOC=1076  4F0000, none, nixbpe=110000
+54 LOC=1079  05, BYTE
+55 LOC=107A  none

@@ -1,0 +1,1 @@
+Assembler_directives = ['START', 'END', 'BYTE', 'WORD', 'RESB', 'RESW', 'BASE', 'EQU']

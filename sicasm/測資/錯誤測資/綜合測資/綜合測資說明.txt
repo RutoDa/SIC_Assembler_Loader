@@ -1,0 +1,59 @@
+# @title 這個有說明
+COPY        STL         0       #9.開頭不是START
+COPY        START       0
+FIRST       STL         RETADR
+Ldb         #LENGTH              #4.正確為LDB (都大寫)
+BASE        LENGTH
+CLOOP       +JSub       RDREC       #4.正確為+JSub (都大寫)
+LDA         LENGTH
+COMP        #0
+JEQ         ENDFIL
++JSUB       WRREC
+J           CLOOP
+ENDFIL      LDA         EOF
+STA         BUFFER
+LDA         #3
+STA         LENGTH
++JSUB       WRREC
+J           @RET              #RET前面不可以有@符號
+EOF         BYTE        c'EOF'    #c要改成大寫
+RETADR      RESW        1
+LENGTH      RESW        1
+BUFFER      RESB        a4096       #RESB後面只能接數字
+BUFEND      Equ         *         #EQU要是大寫
+MAXLEN      EQU         BUFEND-BUFFER
+TEST        EQU         EXIT      #純粹測試EQU forward reference
+.
+.   SUBROUTINE RDREC
+.
+RDREC       CLEAR       X
+CLEAR       A
+CLEAR       S
++LDT        #MAXLEN
+RLOOP       TD          INPUT
+JEQ         RLOOP
+RD          INPUT
+COMPR       a,S                #a要是大寫
+JEQ         EXIT  
+STCH        BUFFER,X
+TIXR        T
+JLT         RLoop
+EXIT        STX         LENGTH
+RSUB
+INPUT       BYTE        X'F1'
+.
+.   SUBROUTINE WRREC
+.
+WRREC       CLEAR       X
+LDT         LENGTH
+WLOOP       TD          OUTPUT
+JEG         WLOOP             #沒有JGB這個Mnemonic (一個打錯的概念)
+LDCH        BUFFER,X
+WD          output
+TIXR        #T
+JLT         WLoop             #原本就有的，警告轉換成大寫
+REF         LDA         WLoop+13
+RSUB
+OUTPUT      BYTE        Q'05'     #Q要改為C或X
+END         FIRST
+STL         FIRST             #測試最後一個要是END
