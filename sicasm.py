@@ -25,14 +25,13 @@ if __name__ == '__main__':
                 for line in output:
                     file.write(line + "\n")
             print(f"輸出題目要求的輸出: {file_name_without_extension}_output.txt")
-        
         except PC_Base_ERROR as msg:
             print(msg)
             print('程式因錯誤暫停執行!!')
         except Expression_ERROR as msg:
             print(msg)
             print('程式因錯誤暫停執行!!')
-        #except :          
-            #print('程式因不明錯誤暫停執行!!')
+        except :          
+            print('程式因不明錯誤暫停執行!!')
     else:
         print('程式因錯誤暫停執行!!')

@@ -1,5 +1,3 @@
-from sicasm_package.AssemblerDirectives import *
-from sicasm_package.OPTAB import *
 import re
 
 class Expression_ERROR(Exception):
